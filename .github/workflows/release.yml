@@ -12,16 +12,13 @@ jobs:
   create-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Install zip
-        run: sudo apt install zip
-
       - name: Get latest code
         uses: actions/checkout@v4
 
       - name: Bundle files
         run: |
           mkdir -p ./temp/pulsar-ipl
-          rsync -a --exclude='.git/' --exclude='.github/' . ./temp/pulsar-ipl/
+          rsync -a --exclude='.github/' . ./temp/pulsar-ipl/
           cd ./temp && zip -r ../pulsar-ipl.zip ./pulsar-ipl
 
       - name: Create release
