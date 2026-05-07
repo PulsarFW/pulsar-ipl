@@ -232,7 +232,7 @@ CreateThread(function()
         AgentsAirstrip.LoadDefault()   -- -2106.98, 1468.31, 282.0
         AgentsHangarDoor.LoadDefault() -- -2632.43, 2963.23, 8.5
     end
-
+    
     -- ====================================================================
     -- =----------------------- [DLC: Money Fronts] ----------------------=
     -- ====================================================================
@@ -240,5 +240,17 @@ CreateThread(function()
         MoneyCarwash.LoadDefault() -- 26.074, -1398.979, -75.0
         MoneyOffice.LoadDefault()  -- -1160.493, -1538.932, -50.0
         MoneyConstruction.LoadDefault()
+    end
+    
+    -- ====================================================================
+    -- =---------------- [DLC: A Safehouse in the Hills] -----------------=
+    -- ====================================================================
+    if GetGameBuildNumber() >= 3717 then
+        Mansion1.LoadDefault() -- 543.852, 712.754, 201.0
+        Mansion2.LoadDefault() -- -1630.434, 470.852, 128.0
+        Mansion3.LoadDefault() -- -2601.712, 1874.826, 166.0
+        MansionBasement1.LoadDefault()
+        MansionBasement2.LoadDefault()
+        MansionBasement3.LoadDefault()
     end
 end)
